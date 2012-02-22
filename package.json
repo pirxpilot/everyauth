@@ -27,10 +27,10 @@
   },
   "dependencies": {
     "oauth": "https://github.com/ciaranj/node-oauth/tarball/master",
-    "restler": ">=0.2.1",
+    "restler": "0.2.5",
     "request": ">=2.2.0",
     "connect": ">=1 <2",
-    "openid": ">=0.2.0",
+    "openid": "0.3.2",
     "xml2js": ">=0.1.7",
     "node-swt": ">=0.1.1",
     "node-wsfederation": ">=0.1.1",
