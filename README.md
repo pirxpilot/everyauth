@@ -159,8 +159,7 @@ everyauth.everymodule.handleLogout( function (req, res) {
   
   // And/or put your extra logic here
   
-  res.writeHead(303, { 'Location': this.logoutRedirectPath() });
-  res.end();
+  this.redirect(res, this.logoutRedirectPath());
 });
 ```
 
@@ -172,13 +171,11 @@ You may want your own callback that decides where to send a user after login or 
 everyauth.password
   .respondToLoginSucceed( function (res, user, data) {
     if (user) {
-      res.writeHead(303, {'Location': data.session.redirectTo});
-      res.end();
+      this.redirect(res, data.session.redirectTo)
     }   
   })
   .respondToRegistrationSucceed( function (res, user, data) {
-    res.writeHead(303, {'Location': data.session.redirectTo});
-    res.end();
+    this.redirect(res, data.session.redirectTo)
   })
 ```
 
